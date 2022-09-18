@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/colorPrimaryDark">
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="35dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_back" />
+
+    <RelativeLayout
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/imge222"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_pin" />
+
+        <TextView
+            android:id="@+id/tv_unlock_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imge222"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Enter PIN to unlock"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#000" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/pass22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:gravity="center"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:padding="5dp"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="#000"
+            tools:ignore="TextViewEdits" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/pass22"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="15dp"
+        android:background="#DDD"
+        android:padding="2dp" />
+
+    <LinearLayout
+        android:id="@+id/keypad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/one"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:background="@color/colorPrimary"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+
+            <Button
+                android:id="@+id/two"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:background="@color/colorPrimary"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+
+            <Button
+                android:id="@+id/three"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@color/colorPrimary"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:id="@+id/four"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:background="@color/colorPrimary"
+                android:text="4"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+
+            <Button
+                android:id="@+id/five"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:background="@color/colorPrimary"
+                android:text="5"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+
+            <Button
+                android:id="@+id/six"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@color/colorPrimary"
+                android:text="6"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:id="@+id/seven"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:background="@color/colorPrimary"
+                android:text="7"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+
+            <Button
+                android:id="@+id/eight"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:background="@color/colorPrimary"
+                android:text="8"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+
+            <Button
+                android:id="@+id/nine"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@color/colorPrimary"
+                android:text="9"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <ImageButton
+                android:id="@+id/exitImageButton_id"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@color/colorPrimary"
+                android:src="@drawable/ic_logout" />
+
+            <Button
+                android:id="@+id/zero"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:background="@color/colorPrimary"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="40dp" />
+
+            <ImageButton
+                android:id="@+id/backspace"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:background="@color/colorPrimary"
+                android:src="@drawable/ic_backspace" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

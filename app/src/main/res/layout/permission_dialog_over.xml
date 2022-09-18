@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <TextView
+        android:id="@+id/permission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="Permission"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/permission"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:padding="25dp"
+        android:text="@string/permission_over"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/desfdfdc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/desc"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text=" Smart AppLock =>Find Smart Applock =>Enable Permission."
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/desfdfdc"
+        android:layout_alignLeft="@+id/desfdfdc"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/transparent"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/allow"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/desfdfdc"
+        android:layout_alignRight="@+id/desfdfdc"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/corner_btn_permission"
+        android:text="Allow"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
+</RelativeLayout>

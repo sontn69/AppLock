@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/drawable/button_corner.xml" value="0.144" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/drawable/button_select.xml" value="0.1435" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/drawable/button_selector.xml" value="0.144" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/drawable/corner_btn_permission.xml" value="0.144" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/drawable/dialog_corner.xml" value="0.144" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/drawable/edittext_boarder.xml" value="0.144" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/drawable/ic_eco.xml" value="0.1565" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/drawable/ic_login.xml" value="0.1565" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/drawable/ic_logout.xml" value="0.1565" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/drawable/spinner_border.xml" value="0.144" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/drawable/title_arrow.xml" value="0.144" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/activity_gesture_lock.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/activity_gesture_unlock.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/activity_main.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/activity_pattern_set_up.xml" value="0.2" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/activity_pattern_unlock.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/activity_pin_lock.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/activity_pin_unlock.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/activity_spalash.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/activity_unlock_metod.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/custom_gesture_service.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/custom_pattern_service.xml" value="0.1625" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/custom_pin_service.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/fragment_dialog_security.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/fragment_forget_dialog.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/fragment_my_dialog.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/gesture_toolbar.xml" value="0.1625" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/layout_applist_item.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/layout_list_apps.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/pattern_toolbar.xml" value="0.1625" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/permission_dialog.xml" value="0.1625" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/permission_dialog_over.xml" value="0.1625" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/pin_toolbar.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/profile_toolbar.xml" value="0.268" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/row.xml" value="0.16354166666666667" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/layout/spinner_item.xml" value="0.1625" />
+        <entry key="..\:/Users/nts69/AndroidStudioProjects/App/app/src/main/res/menu/reset_pass_menu.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

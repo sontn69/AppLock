@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    tools:context=".fragment.ForgetDialogFragment">
+
+
+    <TextView
+        android:id="@+id/detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Security Question"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/detail"
+        android:background="#b9bfb9" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/view"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:text="Question"
+        android:textColor="@color/app_color"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/answer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/question"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/edittext_boarder"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:hint="Enter Your answer"
+        android:textSize="18sp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/answer"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="15dp">
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/dialog_corner"
+            android:text="Cancel"
+            android:textColor="@color/app_color"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/dialog_corner"
+            android:text="Submit"
+            android:textColor="@color/app_color"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_color"
+    tools:context=".activity.PatternUnlockActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent">
+
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:src="@drawable/ic_pattern" />
+
+
+        <TextView
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="Draw an unlock pattern"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <com.andrognito.patternlockview.PatternLockView
+            android:id="@+id/patter_lock_view"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_below="@+id/spinner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            app:aspectRatio="square"
+            app:aspectRatioEnabled="true"
+            app:dotAnimationDuration="150"
+            app:dotCount="3" />
+
+        <Button
+            android:id="@+id/forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/patter_lock_view"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif-condensed"
+            android:text=" Forget pattern"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>
+
+
