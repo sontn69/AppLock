@@ -3,5 +3,5 @@
 
     <item
         android:id="@+id/one"
-        android:title="Reset Lock Type"/>
+        android:title="Reset Lock Type" />
 </menu>

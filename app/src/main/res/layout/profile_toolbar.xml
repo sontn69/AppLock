@@ -5,7 +5,7 @@
     android:id="@+id/linear"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorGray"
     android:elevation="5dp"
     android:fitsSystemWindows="true"
     app:contentInsetEnd="0dp"
@@ -22,8 +22,6 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:padding="10dp"
-            android:paddingLeft="1dp"
-            android:paddingBottom="10dp"
             android:src="@drawable/ic_add" />
 
         <TextView
@@ -34,16 +32,16 @@
             android:layout_centerVertical="true"
             android:text="Smart Lock"
             android:textColor="#000"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
 
         <ImageView
             android:id="@+id/plus"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:paddingLeft="1dp"
+            android:paddingStart="1dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:src="@drawable/ic_more" />

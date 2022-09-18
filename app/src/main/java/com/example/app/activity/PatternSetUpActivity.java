@@ -28,7 +28,7 @@ public class PatternSetUpActivity extends AppCompatActivity implements DialogFra
 
     String[] descriptionData = {"Unlock", "Confirm", "Save"};
     TextView textView;
-    StateProgressBar stateProgressBar;
+//    StateProgressBar stateProgressBar;
     Button reset, conform;
     ImageView lockmethod, back;
     Button skip, save;
@@ -46,11 +46,11 @@ public class PatternSetUpActivity extends AppCompatActivity implements DialogFra
             finish();
         }
 
-        stateProgressBar = (StateProgressBar) findViewById(R.id.state_progress_bar);
+//        stateProgressBar = (StateProgressBar) findViewById(R.id.state_progress_bar);
         textView = (TextView) findViewById(R.id.spinner);
         reset = (Button) findViewById(R.id.reset);
         conform = (Button) findViewById(R.id.conform);
-        stateProgressBar.setStateDescriptionData(descriptionData);
+//        stateProgressBar.setStateDescriptionData(descriptionData);
         mPatternLockView = (PatternLockView) findViewById(R.id.patter_lock_view);
         lockmethod = (ImageView) findViewById(R.id.clear);
         back = (ImageView) findViewById(R.id.back);
@@ -74,8 +74,8 @@ public class PatternSetUpActivity extends AppCompatActivity implements DialogFra
 
             PrefrancesUtils.setPatternfirst(null);
             textView.setText("Draw an unlock pattern");
-            stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.ONE);
-            stateProgressBar.enableAnimationToCurrentState(true);
+//            stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.ONE);
+//            stateProgressBar.enableAnimationToCurrentState(true);
             conform.setVisibility(View.GONE);
             mPatternLockView.clearPattern();
         });
@@ -126,21 +126,21 @@ public class PatternSetUpActivity extends AppCompatActivity implements DialogFra
                     if (conformpattern.equalsIgnoreCase(PrefrancesUtils.getPatternfirst()) && !conformpattern.isEmpty()) {
                         conform.setVisibility(View.VISIBLE);
                         textView.setText(" Pattern  Matched");
-                        stateProgressBar.enableAnimationToCurrentState(true);
-                        stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.THREE);
+//                        stateProgressBar.enableAnimationToCurrentState(true);
+//                        stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.THREE);
                     } else {
                         textView.setText(" Pattern Not Matched");
                         mPatternLockView.clearPattern();
                         conform.setVisibility(View.INVISIBLE);
-                        stateProgressBar.enableAnimationToCurrentState(true);
-                        stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.TWO);
+//                        stateProgressBar.enableAnimationToCurrentState(true);
+//                        stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.TWO);
                         //Toast.makeText(PatternActivity.this, " Pattern Not Matched", Toast.LENGTH_SHORT).show();
                     }
                 } else if (pattern.size() >= 3) {
                     String firstdraw = PatternLockUtils.patternToString(mPatternLockView, pattern);
                     PrefrancesUtils.setPatternfirst(firstdraw);
-                    stateProgressBar.enableAnimationToCurrentState(true);
-                    stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.TWO);
+//                    stateProgressBar.enableAnimationToCurrentState(true);
+//                    stateProgressBar.setCurrentStateNumber(StateProgressBar.StateNumber.TWO);
                     textView.setText("Draw Pattern to confirm");
                     reset.setVisibility(View.VISIBLE);
                     mPatternLockView.clearPattern();

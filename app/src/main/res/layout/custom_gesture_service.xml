@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/app_color">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/lin"
@@ -11,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/gestureOverlayView"
         android:layout_alignParentTop="true"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorGray"
         android:gravity="center"
         android:padding="5dp">
 

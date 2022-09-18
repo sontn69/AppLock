@@ -8,7 +8,7 @@
         android:id="@+id/permission"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorGray"
         android:fontFamily="sans-serif-condensed"
         android:gravity="center"
         android:padding="15dp"
@@ -34,9 +34,8 @@
         android:fontFamily="sans-serif-condensed"
         android:gravity="center"
         android:padding="10dp"
-        android:text=" Smart AppLock =>Find Smart Applock =>Enable Permission.
-"
-        android:textColor="@color/colorPrimary"
+        android:text=" Smart AppLock =>Find Smart Applock =>Enable Permission."
+        android:textColor="@color/colorDarkRed"
         android:textSize="18sp" />
 
 
