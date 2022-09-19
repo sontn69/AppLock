@@ -50,10 +50,10 @@ public class DialogFragmentSecurity extends DialogFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_dialog_security, container, false);
-        spinner = (Spinner) view.findViewById(R.id.spinner);
+        spinner = view.findViewById(R.id.spinner);
         getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-        answer = (EditText) view.findViewById(R.id.nick);
-        save = (Button) view.findViewById(R.id.Save);
+        answer = view.findViewById(R.id.nick);
+        save = view.findViewById(R.id.Save);
         // skip=(Button)view.findViewById(R.id.skip);
         return view;
     }
@@ -65,13 +65,9 @@ public class DialogFragmentSecurity extends DialogFragment {
         final ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getContext(), R.layout.spinner_item, questionList) {
             @Override
             public boolean isEnabled(int position) {
-                if (position == 0) {
-                    // Disable the first item from Spinner
-                    // First item will be use for hint
-                    return false;
-                } else {
-                    return true;
-                }
+                // Disable the first item from Spinner
+                // First item will be use for hint
+                return position != 0;
             }
 
             @Override
@@ -111,20 +107,17 @@ public class DialogFragmentSecurity extends DialogFragment {
             }
         });
 
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        save.setOnClickListener(v -> {
 
-                String ans = answer.getText().toString().trim();
-                if (ans != null && !ans.isEmpty()) {
-                    if (PrefrancesUtils.getQuestion() != null) {
-                        mCallback.Update(ans);
-                    } else {
-                        Toast.makeText(getActivity(), "Select a Question", Toast.LENGTH_SHORT).show();
-                    }
+            String ans = answer.getText().toString().trim();
+            if (ans != null && !ans.isEmpty()) {
+                if (PrefrancesUtils.getQuestion() != null) {
+                    mCallback.Update(ans);
                 } else {
-                    Toast.makeText(getActivity(), "Enter Answer", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Select a Question", Toast.LENGTH_SHORT).show();
                 }
+            } else {
+                Toast.makeText(getActivity(), "Enter Answer", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -139,7 +132,7 @@ public class DialogFragmentSecurity extends DialogFragment {
     }
 
     public interface OnCallbackReceived {
-        public void Update(String answer);
+        void Update(String answer);
     }
 
     @Override

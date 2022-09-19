@@ -35,8 +35,8 @@ public class PinLockActivity extends AppCompatActivity implements View.OnClickLi
             finish();
         }
         setContentView(R.layout.activity_pin_lock);
-        back = (ImageView) findViewById(R.id.back);
-        confirm_btn = (ImageButton) findViewById(R.id.right);
+        back = findViewById(R.id.back);
+        confirm_btn = findViewById(R.id.right);
         count = 0;
         mPassword = "";
         mPasswordConfirm = "";

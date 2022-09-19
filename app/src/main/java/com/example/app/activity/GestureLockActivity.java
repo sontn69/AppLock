@@ -41,10 +41,10 @@ public class GestureLockActivity extends AppCompatActivity implements DialogFrag
             finish();
         }
         setContentView(R.layout.activity_gesture_lock);
-        lockmethod = (ImageView) findViewById(R.id.clear);
-        back = (ImageView) findViewById(R.id.back);
+        lockmethod = findViewById(R.id.clear);
+        back = findViewById(R.id.back);
         File gestureFile = new File(Environment.getDataDirectory() + "/data/" + getPackageName(), "gesture");
-        GestureOverlayView gestureOverlayView = (GestureOverlayView) findViewById(R.id.gestureOverlayView);
+        GestureOverlayView gestureOverlayView = findViewById(R.id.gestureOverlayView);
         gestureOverlayView.addOnGestureListener(new GestureProcessor());
         first = true;
         library = GestureLibraries.fromFile(gestureFile);

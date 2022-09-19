@@ -32,10 +32,10 @@ public class ForgetDialogFragment extends DialogFragment {
 
         View view = inflater.inflate(R.layout.fragment_forget_dialog, container, false);
         getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-        question = (TextView) view.findViewById(R.id.question);
-        answer = (EditText) view.findViewById(R.id.answer);
-        cancel = (Button) view.findViewById(R.id.cancel);
-        submit = (Button) view.findViewById(R.id.submit);
+        question = view.findViewById(R.id.question);
+        answer = view.findViewById(R.id.answer);
+        cancel = view.findViewById(R.id.cancel);
+        submit = view.findViewById(R.id.submit);
         return view;
     }
 
@@ -60,7 +60,7 @@ public class ForgetDialogFragment extends DialogFragment {
     }
 
     public interface OnCallbackReceived {
-        public void Update(String answer);
+        void Update(String answer);
     }
 
     @Override

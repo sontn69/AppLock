@@ -7,6 +7,7 @@ import android.os.Parcelable;
 import android.view.accessibility.AccessibilityEvent;
 
 public class NotificationServices extends AccessibilityService {
+
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
         if (event.getEventType() == AccessibilityEvent.TYPE_NOTIFICATION_STATE_CHANGED) {

@@ -71,26 +71,27 @@ public class MainActivity extends AppCompatActivity implements MyDialogFragment.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        change = (ImageView) findViewById(R.id.plus);
-        plus = (ImageView) findViewById(R.id.back);
-        Add = (CardView) findViewById(R.id.add);
-        recyclerView = (RecyclerView) findViewById(R.id.recycler);
+        change = findViewById(R.id.plus);
+        plus = findViewById(R.id.back);
+        Add = findViewById(R.id.add);
+        recyclerView = findViewById(R.id.recycler);
         databaseHandler = new DatabaseHandler(MainActivity.this);
-        progressBar = (ProgressBar) findViewById(R.id.progress);
+        progressBar = findViewById(R.id.progress);
         manager = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.VERTICAL, false);
         dialog = new Dialog(this);
         dialog_over = new Dialog(this);
         dialog_over.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog_over.setContentView(R.layout.permission_dialog_over);
-        cancel_over = (Button) dialog_over.findViewById(R.id.cancel);
-        allow_over = (Button) dialog_over.findViewById(R.id.allow);
+        cancel_over = dialog_over.findViewById(R.id.cancel);
+        allow_over = dialog_over.findViewById(R.id.allow);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.permission_dialog);
-        cancel = (Button) dialog.findViewById(R.id.cancel);
-        allow = (Button) dialog.findViewById(R.id.allow);
+        cancel = dialog.findViewById(R.id.cancel);
+        allow = dialog.findViewById(R.id.allow);
 
         ClickEvent();
         DatabaseAllData();

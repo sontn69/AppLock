@@ -17,7 +17,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/add"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/appbar"
         android:layout_margin="10dp"
         android:background="@color/app_color"
@@ -35,7 +35,7 @@
                 android:layout_centerVertical="true"
                 android:gravity="center"
                 android:maxLines="2"
-                android:text="Add New Apps to Smart AppLock"
+                android:text="Add Permission to Smart AppLock"
                 android:textColor="#000"
                 android:textSize="18sp" />
         </RelativeLayout>

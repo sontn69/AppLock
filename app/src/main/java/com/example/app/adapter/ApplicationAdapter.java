@@ -24,8 +24,8 @@ public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.
     OnItemClickListener mItemClickListener;
 
     private List<ApplicationInfo> appsList;
-    private Context context;
-    private PackageManager packageManager;
+    private final Context context;
+    private final PackageManager packageManager;
     ArrayList<AllAppListModel> list;
     DatabaseHandler databaseHandler;
 
@@ -53,11 +53,7 @@ public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.
         boolean result = databaseHandler.getpack_name(model.getPackge_name());
 
         Log.e("result", String.valueOf(result));
-        if (result) {
-            holder.textView.setChecked(true);
-        } else {
-            holder.textView.setChecked(false);
-        }
+        holder.textView.setChecked(result);
     }
 
     @Override
@@ -73,9 +69,9 @@ public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.
         public RemaingView(View itemView) {
             super(itemView);
 
-            textView = (CheckedTextView) itemView.findViewById(R.id.app_name);
-            imageView = (ImageView) itemView.findViewById(R.id.app_icon);
-            layout = (RelativeLayout) itemView.findViewById(R.id.rl);
+            textView = itemView.findViewById(R.id.app_name);
+            imageView = itemView.findViewById(R.id.app_icon);
+            layout = itemView.findViewById(R.id.rl);
             layout.setOnClickListener(this);
         }
 
@@ -89,7 +85,7 @@ public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.
     }
 
     public interface OnItemClickListener {
-        public void onItemClick(View view, String name);
+        void onItemClick(View view, String name);
     }
 
     public void SetOnItemClickListener(final OnItemClickListener mItemClickListener) {

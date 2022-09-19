@@ -60,10 +60,10 @@ public class PinLockService extends Service implements View.OnClickListener {
         registerReceiver(new PhoneStateReceiver(), new IntentFilter("android.intent.action.PHONE_STATE"));
 
         mFloatingView = LayoutInflater.from(this).inflate(R.layout.custom_pin_service, null);
-        imageView = (ImageView) mFloatingView.findViewById(R.id.back);
-        pass_text = (TextView) mFloatingView.findViewById(R.id.pass);
-        layout = (RelativeLayout) mFloatingView.findViewById(R.id.rl);
-        appicon = (ImageView) mFloatingView.findViewById(R.id.imge222);
+        imageView = mFloatingView.findViewById(R.id.back);
+        pass_text = mFloatingView.findViewById(R.id.pass);
+        layout = mFloatingView.findViewById(R.id.rl);
+        appicon = mFloatingView.findViewById(R.id.imge222);
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
 

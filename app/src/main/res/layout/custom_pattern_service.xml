@@ -39,13 +39,13 @@
             android:textSize="18sp" />
 
         <com.andrognito.patternlockview.PatternLockView
-            android:layout_marginBottom="20dp"
             android:id="@+id/patter_lock_view"
             android:layout_width="280dp"
             android:layout_height="280dp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
             app:aspectRatio="square"
             app:aspectRatioEnabled="true"
             app:dotAnimationDuration="150"

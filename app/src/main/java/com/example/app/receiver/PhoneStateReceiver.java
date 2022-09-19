@@ -12,8 +12,8 @@ public class PhoneStateReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-
         String type = PrefrancesUtils.getLockType(context);
+
         if (type.equalsIgnoreCase("pin")) {
             context.stopService(new Intent(context, PinLockService.class));
         } else if (type.equalsIgnoreCase("pattern")) {

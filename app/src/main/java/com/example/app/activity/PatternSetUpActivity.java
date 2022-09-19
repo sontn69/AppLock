@@ -47,13 +47,13 @@ public class PatternSetUpActivity extends AppCompatActivity implements DialogFra
         }
 
 //        stateProgressBar = (StateProgressBar) findViewById(R.id.state_progress_bar);
-        textView = (TextView) findViewById(R.id.spinner);
-        reset = (Button) findViewById(R.id.reset);
-        conform = (Button) findViewById(R.id.conform);
+        textView = findViewById(R.id.spinner);
+        reset = findViewById(R.id.reset);
+        conform = findViewById(R.id.conform);
 //        stateProgressBar.setStateDescriptionData(descriptionData);
-        mPatternLockView = (PatternLockView) findViewById(R.id.patter_lock_view);
-        lockmethod = (ImageView) findViewById(R.id.clear);
-        back = (ImageView) findViewById(R.id.back);
+        mPatternLockView = findViewById(R.id.patter_lock_view);
+        lockmethod = findViewById(R.id.clear);
+        back = findViewById(R.id.back);
 
         back.setOnClickListener(v -> {
 

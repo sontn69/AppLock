@@ -50,9 +50,9 @@ public class GestureLockService extends Service implements View.OnClickListener 
         registerReceiver(new PhoneStateReceiver(), new IntentFilter("android.intent.action.PHONE_STATE"));
         //getting the widget layout from xml using layout inflater
         mFloatingView = LayoutInflater.from(this).inflate(R.layout.custom_gesture_service, null);
-        imageView = (ImageView) mFloatingView.findViewById(R.id.back);
-        view = (GestureOverlayView) mFloatingView.findViewById(R.id.gestureOverlayView);
-        textView = (TextView) mFloatingView.findViewById(R.id.tv_gesture_desc);
+        imageView = mFloatingView.findViewById(R.id.back);
+        view = mFloatingView.findViewById(R.id.gestureOverlayView);
+        textView = mFloatingView.findViewById(R.id.tv_gesture_desc);
         //setting the layout parameters
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
 

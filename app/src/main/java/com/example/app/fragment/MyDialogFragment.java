@@ -34,8 +34,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-
-@SuppressWarnings("ALL")
 public class MyDialogFragment extends DialogFragment {
     RecyclerView recyclerView;
     ApplicationAdapter adapter;

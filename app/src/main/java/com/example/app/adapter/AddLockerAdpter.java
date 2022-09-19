@@ -90,10 +90,10 @@ public class AddLockerAdpter extends RecyclerView.Adapter<AddLockerAdpter.AddVie
 
         public AddViewHolder(View itemView) {
             super(itemView);
-            imageView = (ImageView) itemView.findViewById(R.id.app_icon);
-            name = (TextView) itemView.findViewById(R.id.app_name);
-            lock = (ImageButton) itemView.findViewById(R.id.btn_lock);
-            delete = (ImageButton) itemView.findViewById(R.id.btn_delete);
+            imageView = itemView.findViewById(R.id.app_icon);
+            name = itemView.findViewById(R.id.app_name);
+            lock = itemView.findViewById(R.id.btn_lock);
+            delete = itemView.findViewById(R.id.btn_delete);
             delete.setOnClickListener(this);
         }
 

@@ -1,4 +1,6 @@
 package com.example.app.service;
+import static android.app.PendingIntent.FLAG_ONE_SHOT;
+
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.AlarmManager;
@@ -21,6 +23,7 @@ import android.util.Log;
 
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
 
 import com.example.app.R;
@@ -36,9 +39,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-
-@SuppressWarnings("ALL")
 public class AppLaunchDectionService extends Service {
+
     public static final String EXTRA_PACKAGE = "package";
     LockPackageDatabase databaseHandler;
     private boolean isAppRunning = false;
@@ -55,10 +57,8 @@ public class AppLaunchDectionService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         super.onStartCommand(intent, flags, startId);
-
         scheduleMethod();
         databaseHandler = new LockPackageDatabase(getApplicationContext());
-
         return START_STICKY;
     }
 
@@ -71,6 +71,7 @@ public class AppLaunchDectionService extends Service {
             startForeground(1, new Notification());
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     private void startMyOwnForeground(){
         String NOTIFICATION_CHANNEL_ID = "com.example.simpleapp";
         String channelName = "My Background Service";
@@ -141,28 +142,24 @@ public class AppLaunchDectionService extends Service {
     }
 
     public static String getProcessName(Context context) {
+
         String foregroundProcess = "";
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            UsageStatsManager mUsageStatsManager = (UsageStatsManager) context.getSystemService(USAGE_STATS_SERVICE);
-            long time = System.currentTimeMillis();
-            List<UsageStats> stats = mUsageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, time - 1000 * 10, time);
-            if (stats != null) {
-                SortedMap<Long, UsageStats> mySortedMap = new TreeMap<Long, UsageStats>();
-                for (UsageStats usageStats : stats) {
-                    mySortedMap.put(usageStats.getLastTimeUsed(), usageStats);
-                }
-                if (mySortedMap != null && !mySortedMap.isEmpty()) {
-                    String topPackageName = mySortedMap.get(mySortedMap.lastKey()).getPackageName();
-
-                    foregroundProcess = topPackageName;
-                }
+        UsageStatsManager mUsageStatsManager = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP_MR1) {
+            mUsageStatsManager = (UsageStatsManager) context.getSystemService(USAGE_STATS_SERVICE);
+        }
+        long time = System.currentTimeMillis();
+        List<UsageStats> stats = mUsageStatsManager.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, time - 1000 * 10, time);
+        if (stats != null) {
+            SortedMap<Long, UsageStats> mySortedMap = new TreeMap<>();
+            for (UsageStats usageStats : stats) {
+                mySortedMap.put(usageStats.getLastTimeUsed(), usageStats);
             }
-        } else {
-            ActivityManager activityManager = (ActivityManager) context.getSystemService(ACTIVITY_SERVICE);
-            @SuppressWarnings("deprecation") ActivityManager.RunningTaskInfo foregroundTaskInfo = activityManager.getRunningTasks(1).get(0);
-            foregroundProcess = foregroundTaskInfo.topActivity.getPackageName();
+            if (mySortedMap != null && !mySortedMap.isEmpty()) {
+                String topPackageName = mySortedMap.get(mySortedMap.lastKey()).getPackageName();
 
-            foregroundProcess = foregroundTaskInfo.topActivity.getPackageName();
+                foregroundProcess = topPackageName;
+            }
         }
         Log.i("packageName", foregroundProcess + "");
 
@@ -186,27 +183,20 @@ public class AppLaunchDectionService extends Service {
         Log.d("task", "TASK REMOVED");
 
         Intent intent = new Intent(getApplicationContext(), AppLaunchDectionService.class);
-        PendingIntent pendingIntent = PendingIntent.getService(this, 1, intent, PendingIntent.FLAG_ONE_SHOT);
+        PendingIntent pendingIntent = PendingIntent.getService(this, 1, intent, FLAG_ONE_SHOT);
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
         alarmManager.set(AlarmManager.RTC_WAKEUP, SystemClock.elapsedRealtime() + 500, pendingIntent);
         super.onTaskRemoved(rootIntent);
     }
 
     private Thread.UncaughtExceptionHandler defaultUEH;
-    private Thread.UncaughtExceptionHandler uncaughtExceptionHandler = new Thread.UncaughtExceptionHandler() {
+    private Thread.UncaughtExceptionHandler uncaughtExceptionHandler = (thread, ex) -> {
+        Log.d("uncaut", "Uncaught exception start!");
+        ex.printStackTrace();
 
-        @Override
-        public void uncaughtException(Thread thread, Throwable ex) {
-            Log.d("uncaut", "Uncaught exception start!");
-            ex.printStackTrace();
-
-            //Same as done in onTaskRemoved()
-            PendingIntent service = PendingIntent.getService(
-                    getApplicationContext(),
-                    1001,
-                    new Intent(getApplicationContext(), AppLaunchDectionService.class),
-                    PendingIntent.FLAG_ONE_SHOT);
-        }
+        //Same as done in onTaskRemoved()
+        PendingIntent service = PendingIntent.getService(
+                getApplicationContext(), 1001, new Intent(getApplicationContext(), AppLaunchDectionService.class), FLAG_ONE_SHOT);
     };
 }
 

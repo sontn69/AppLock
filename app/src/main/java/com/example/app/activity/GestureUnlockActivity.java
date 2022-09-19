@@ -34,7 +34,7 @@ public class GestureUnlockActivity extends AppCompatActivity implements ForgetDi
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_gesture_unlock);
-        GestureOverlayView view = (GestureOverlayView) findViewById(R.id.gestureOverlayView);
+        GestureOverlayView view = findViewById(R.id.gestureOverlayView);
         view.addOnGestureListener(new GestureProcessor());
         File gestureFile = new File(Environment.getDataDirectory() + "/data/" + getPackageName(), "gesture");
         library = GestureLibraries.fromFile(gestureFile);

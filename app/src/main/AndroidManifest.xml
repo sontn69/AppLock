@@ -54,15 +54,18 @@
 
         <activity
             android:name=".activity.UnlockMetodActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activity.SpalashActivity"
-            android:exported="true">
+            android:exported="true" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".activity.SpalashActivity"
+            android:exported="false">
         </activity>
         <activity
             android:name=".activity.PinUnlockActivity"
@@ -84,7 +87,11 @@
             android:exported="false" />
         <activity
             android:name=".activity.MainActivity"
-            android:exported="false" />
+            android:exported="false">
+
+
+
+        </activity>
 
         <service
             android:name=".service.PatternLockService"

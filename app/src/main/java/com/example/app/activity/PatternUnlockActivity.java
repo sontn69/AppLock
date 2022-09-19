@@ -23,6 +23,7 @@ import com.example.app.other.PrefrancesUtils;
 import java.util.List;
 
 public class PatternUnlockActivity extends AppCompatActivity implements ForgetDialogFragment.OnCallbackReceived {
+
     ConnectPatternView view;
     private PatternLockView mPatternLockView;
     Button forget;

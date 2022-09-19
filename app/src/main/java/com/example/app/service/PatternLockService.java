@@ -47,8 +47,8 @@ public class PatternLockService extends Service implements View.OnClickListener 
         registerReceiver(new PhoneStateReceiver(), new IntentFilter("android.intent.action.PHONE_STATE"));
         //getting the widget layout from xml using layout inflater
         mFloatingView = LayoutInflater.from(this).inflate(R.layout.custom_pattern_service, null);
-        mPatternLockView = (PatternLockView) mFloatingView.findViewById(R.id.patter_lock_view);
-        imageView = (ImageView) mFloatingView.findViewById(R.id.back);
+        mPatternLockView = mFloatingView.findViewById(R.id.patter_lock_view);
+        imageView = mFloatingView.findViewById(R.id.back);
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
 
